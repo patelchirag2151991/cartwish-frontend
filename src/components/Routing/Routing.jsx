@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "../Home/HomePage";
@@ -29,4 +29,4 @@ const Routing = () => {
   );
 };
 
-export default Routing;
+export default memo(Routing);

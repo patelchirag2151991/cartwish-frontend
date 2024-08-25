@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, memo } from "react";
 
 import "./Navbar.css";
 import LinkWithIcon from "./LinkWithIcon";
 import rocket from "../../assets/rocket.png";
 import star from "../../assets/glowing-star.png";
 import idButton from "../../assets/id-button.png";
-import memo from "../../assets/memo.png";
+import memoImg from "../../assets/memo.png";
 import order from "../../assets/package.png";
 import lock from "../../assets/locked.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -121,7 +121,7 @@ const Navbar = () => {
         {!user && (
           <>
             <LinkWithIcon title="Login" link="/login" emoji={idButton} />
-            <LinkWithIcon title="Signup" link="/signup" emoji={memo} />
+            <LinkWithIcon title="Signup" link="/signup" emoji={memoImg} />
           </>
         )}
         {user && (
@@ -139,4 +139,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);
